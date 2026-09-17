@@ -33,7 +33,7 @@ A separate tool used **together with** the Hawthorne, not instead of it.
 
 To **double strain**, hold the tin and Hawthorne in one hand and the fine strainer over the glass in the other, and pour through it. It catches ice shards and fragments of herb or fruit.
 
-Use it for shaken drinks served without ice — Daiquiri, Gimlet, Espresso Martini. Ice shards left floating keep melting in the glass and water down the last mouthful.
+Use it for shaken drinks served without ice — Daiquiri, Gimlet, Coffee Martini. Ice shards left floating keep melting in the glass and water down the last mouthful.
 
 ## Bar spoon
 

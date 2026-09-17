@@ -13,7 +13,7 @@ published: true
 Heavy base, wide mouth. For drinks served over a single large cube. Old Fashioned, Negroni.
 
 **Highball**
-Tall and straight. For long carbonated drinks. Gin & Tonic, highballs, Mojito.
+Tall and straight. For long carbonated drinks. Gin & Tonic, highballs, Moscow Mule.
 
 **Shot glass**
 For spirits served straight.
