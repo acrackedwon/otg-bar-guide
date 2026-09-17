@@ -1,6 +1,13 @@
 import { readdirSync, readFileSync, existsSync } from 'node:fs';
 import { join } from 'node:path';
-import { type Block, type ContentPayload, type Entry, parseVideoUrl } from './content.js';
+import {
+  type Block,
+  type ContentPayload,
+  type Entry,
+  DEFAULT_LANG,
+  type Lang,
+  parseVideoUrl,
+} from './content.js';
 
 /** content/*.md 를 읽어 사이트 데이터로 바꾼다. 외부 서비스 의존 없음. */
 
@@ -135,7 +142,7 @@ export function parseBody(body: string): Block[] {
   return blocks;
 }
 
-function contentDir(): string | null {
+function contentRoot(): string | null {
   const candidates = [
     join(process.cwd(), 'content'),
     join(process.cwd(), '..', 'content'),
@@ -144,34 +151,65 @@ function contentDir(): string | null {
   return candidates.find((dir) => existsSync(dir)) ?? null;
 }
 
-export function loadContent(): ContentPayload {
-  const dir = contentDir();
-  const entries: Entry[] = [];
+/** 프런트매터 키는 한국어와 영어를 모두 받는다. */
+const KEYS = {
+  title: ['제목', 'title'],
+  category: ['분류', 'category'],
+  summary: ['요약', 'summary'],
+  order: ['순서', 'order'],
+  video: ['영상', 'video'],
+  published: ['공개', 'published'],
+} as const;
 
-  if (dir) {
-    for (const file of readdirSync(dir).filter((name) => name.endsWith('.md'))) {
-      const { meta, body } = splitFrontMatter(readFileSync(join(dir, file), 'utf8'));
-
-      if ((meta['공개'] ?? 'true').toLowerCase() === 'false') continue;
-
-      const title = meta['제목'] ?? '';
-      if (!title) continue;
-
-      const order = Number(meta['순서']);
-
-      entries.push({
-        id: file.replace(/\.md$/, ''),
-        title,
-        category: meta['분류'] || '기타',
-        summary: meta['요약'] ?? '',
-        order: Number.isFinite(order) ? order : 999,
-        cover: meta['대표사진'] || null,
-        video: parseVideoUrl(meta['영상']),
-        blocks: parseBody(body),
-      });
-    }
+function pick(meta: FrontMatter, names: readonly string[]): string | undefined {
+  for (const name of names) {
+    if (meta[name] !== undefined) return meta[name];
   }
+  return undefined;
+}
 
-  entries.sort((a, b) => a.order - b.order || a.title.localeCompare(b.title, 'ko'));
-  return { source: 'files', updatedAt: new Date().toISOString(), entries };
+function readDir(dir: string): Map<string, Entry> {
+  const found = new Map<string, Entry>();
+  if (!existsSync(dir)) return found;
+
+  for (const file of readdirSync(dir).filter((name) => name.endsWith('.md'))) {
+    const { meta, body } = splitFrontMatter(readFileSync(join(dir, file), 'utf8'));
+
+    if ((pick(meta, KEYS.published) ?? 'true').toLowerCase() === 'false') continue;
+
+    const title = pick(meta, KEYS.title) ?? '';
+    if (!title) continue;
+
+    const order = Number(pick(meta, KEYS.order));
+    const id = file.replace(/\.md$/, '');
+
+    found.set(id, {
+      id,
+      title,
+      category: pick(meta, KEYS.category) || '기타',
+      summary: pick(meta, KEYS.summary) ?? '',
+      order: Number.isFinite(order) ? order : 999,
+      cover: meta['대표사진'] || meta['cover'] || null,
+      video: parseVideoUrl(pick(meta, KEYS.video)),
+      blocks: parseBody(body),
+    });
+  }
+  return found;
+}
+
+/**
+ * 요청한 언어의 글을 읽는다. 아직 번역되지 않은 항목은 기본 언어(한국어)로
+ * 대신 보여준다 — 빈 화면보다는 낫기 때문이다.
+ */
+export function loadContent(lang: Lang = DEFAULT_LANG): ContentPayload {
+  const root = contentRoot();
+  const fallback = root ? readDir(join(root, DEFAULT_LANG)) : new Map<string, Entry>();
+  const wanted = root && lang !== DEFAULT_LANG ? readDir(join(root, lang)) : fallback;
+
+  const entries: Entry[] = [];
+  for (const [id, base] of fallback) entries.push(wanted.get(id) ?? base);
+  for (const [id, entry] of wanted) if (!fallback.has(id)) entries.push(entry);
+
+  entries.sort((a, b) => a.order - b.order || a.title.localeCompare(b.title, lang));
+  return { source: 'files', lang, updatedAt: new Date().toISOString(), entries };
 }

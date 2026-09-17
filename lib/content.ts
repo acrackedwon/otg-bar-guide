@@ -29,8 +29,23 @@ export interface Entry {
 
 export interface ContentPayload {
   source: 'files';
+  lang: Lang;
   updatedAt: string;
   entries: Entry[];
+}
+
+/** 지원 언어. 새 언어는 여기에 추가하고 content/<코드>/ 폴더를 만든다. */
+export const LANGUAGES = [
+  { code: 'ko', label: '한국어', short: 'KO' },
+  { code: 'en', label: 'English', short: 'EN' },
+] as const;
+
+export type Lang = (typeof LANGUAGES)[number]['code'];
+
+export const DEFAULT_LANG: Lang = 'ko';
+
+export function isLang(value: unknown): value is Lang {
+  return LANGUAGES.some((entry) => entry.code === value);
 }
 
 /** 유튜브 링크를 {provider, id}로 정규화. 인식 못하면 null. */

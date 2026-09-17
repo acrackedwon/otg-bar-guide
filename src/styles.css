@@ -201,3 +201,18 @@ header.top {
 .detail td:first-child { white-space: nowrap; }
 .detail strong { color: #fff; font-weight: 600; }
 .detail .note { margin: 14px 0 18px; }
+
+/* ---- 언어 전환 ---- */
+.top__actions { display: flex; align-items: center; gap: 14px; }
+.lang { display: inline-flex; gap: 2px; padding: 2px; background: var(--panel); border: 1px solid var(--line); border-radius: 999px; }
+.lang__btn {
+  padding: 5px 11px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+  background: none;
+  border-radius: 999px;
+}
+.lang__btn[aria-pressed='true'] { color: #16130f; background: var(--accent); }
+.gate .lang { margin-top: 4px; }

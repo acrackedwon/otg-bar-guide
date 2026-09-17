@@ -1,11 +1,76 @@
-import type { Block, ContentPayload, Entry } from '../lib/content.js';
+import {
+  type Block,
+  type ContentPayload,
+  type Entry,
+  DEFAULT_LANG,
+  isLang,
+  type Lang,
+  LANGUAGES,
+} from '../lib/content.js';
 import { embedUrl } from './video.js';
 
 const app = document.querySelector<HTMLDivElement>('#app')!;
 
+/** 화면 문구. 새 언어를 추가하면 여기에도 한 벌 넣는다. */
+const UI = {
+  ko: {
+    subtitle: '직원 가이드',
+    password: '비밀번호',
+    enter: '들어가기',
+    wrongPassword: '비밀번호가 맞지 않습니다.',
+    connectFailed: '접속에 실패했습니다. 잠시 후 다시 시도해 주세요.',
+    serverFailed: '서버에 연결하지 못했습니다.',
+    loadFailed: '콘텐츠를 불러오지 못했습니다.',
+    loading: '불러오는 중…',
+    empty: '아직 내용이 없습니다.',
+    logout: '나가기',
+    hasVideo: '영상 있음',
+  },
+  en: {
+    subtitle: 'Staff Guide',
+    password: 'Password',
+    enter: 'Enter',
+    wrongPassword: 'Incorrect password.',
+    connectFailed: 'Connection failed. Please try again in a moment.',
+    serverFailed: 'Could not reach the server.',
+    loadFailed: 'Could not load the guide.',
+    loading: 'Loading…',
+    empty: 'Nothing here yet.',
+    logout: 'Sign out',
+    hasVideo: 'Video',
+  },
+} as const satisfies Record<Lang, Record<string, string>>;
+
+const LANG_KEY = 'otg-guide-lang';
+
+function storedLang(): Lang {
+  try {
+    const saved = localStorage.getItem(LANG_KEY);
+    if (isLang(saved)) return saved;
+  } catch {
+    /* 사파리 시크릿 모드 등에서 localStorage 접근이 막힐 수 있다 */
+  }
+  return navigator.language?.startsWith('ko') ? 'ko' : DEFAULT_LANG;
+}
+
+let lang: Lang = storedLang();
 let payload: ContentPayload | null = null;
 let activeCategory = '';
 let activeEntryId: string | null = null;
+
+function t(): (typeof UI)[Lang] {
+  return UI[lang];
+}
+
+function setLang(next: Lang): void {
+  lang = next;
+  try {
+    localStorage.setItem(LANG_KEY, next);
+  } catch {
+    /* 저장에 실패해도 이번 세션 동안은 동작한다 */
+  }
+  document.documentElement.lang = next;
+}
 
 function esc(value: string): string {
   return value
@@ -26,12 +91,13 @@ function renderGate(message = ''): void {
   app.innerHTML = `
     <div class="gate">
       <div class="gate__mark">ON THE GROUND</div>
-      <p class="gate__sub">직원 가이드</p>
+      <p class="gate__sub">${esc(t().subtitle)}</p>
       <form id="gate-form">
-        <input type="password" id="gate-input" placeholder="비밀번호" autocomplete="current-password" />
+        <input type="password" id="gate-input" placeholder="${esc(t().password)}" autocomplete="current-password" />
         <p class="error">${esc(message)}</p>
-        <button type="submit">들어가기</button>
+        <button type="submit">${esc(t().enter)}</button>
       </form>
+      ${langSwitch()}
     </div>`;
 
   const form = document.querySelector<HTMLFormElement>('#gate-form')!;
@@ -48,18 +114,42 @@ function renderGate(message = ''): void {
         body: JSON.stringify({ password: input.value }),
       });
       if (!res.ok) {
-        renderGate('비밀번호가 맞지 않습니다.');
+        renderGate(t().wrongPassword);
         return;
       }
       await boot();
     } catch {
-      renderGate('접속에 실패했습니다. 잠시 후 다시 시도해 주세요.');
+      renderGate(t().connectFailed);
     } finally {
       button.disabled = false;
     }
   });
 
+  bindLangSwitch(() => renderGate());
   input.focus();
+}
+
+/* ---------------- 언어 전환 ---------------- */
+
+function langSwitch(): string {
+  const buttons = LANGUAGES.map(
+    (entry) =>
+      `<button class="lang__btn" data-lang="${entry.code}" aria-pressed="${
+        entry.code === lang
+      }" title="${esc(entry.label)}">${esc(entry.short)}</button>`,
+  ).join('');
+  return `<div class="lang">${buttons}</div>`;
+}
+
+function bindLangSwitch(after: () => void): void {
+  app.querySelectorAll<HTMLButtonElement>('.lang__btn').forEach((button) => {
+    button.addEventListener('click', () => {
+      const next = button.dataset.lang;
+      if (!isLang(next) || next === lang) return;
+      setLang(next);
+      after();
+    });
+  });
 }
 
 /* ---------------- 목록 ---------------- */
@@ -84,7 +174,10 @@ function chrome(inner: string): string {
     <header class="top">
       <div class="top__row">
         <span class="top__title">ON THE GROUND</span>
-        <button class="top__logout" id="logout">나가기</button>
+        <div class="top__actions">
+          ${langSwitch()}
+          <button class="top__logout" id="logout">${esc(t().logout)}</button>
+        </div>
       </div>
       ${activeEntryId ? '' : `<div class="tabs" role="tablist">${tabs}</div>`}
     </header>
@@ -99,13 +192,13 @@ function renderList(): void {
         <button class="card" data-entry="${esc(entry.id)}">
           <h2>${esc(entry.title)}</h2>
           ${entry.summary ? `<p>${esc(entry.summary)}</p>` : ''}
-          ${entry.video ? '<p class="card__badge">영상 있음</p>' : ''}
+          ${entry.video ? `<p class="card__badge">${esc(t().hasVideo)}</p>` : ''}
         </button>`,
     )
     .join('');
 
   app.innerHTML = chrome(
-    `<div class="list">${cards || '<p class="empty">아직 내용이 없습니다.</p>'}</div>`,
+    `<div class="list">${cards || `<p class="empty">${esc(t().empty)}</p>`}</div>`,
   );
   bindChrome();
 
@@ -199,6 +292,8 @@ function renderDetail(): void {
 /* ---------------- 공통 ---------------- */
 
 function bindChrome(): void {
+  bindLangSwitch(() => void boot());
+
   document.querySelector<HTMLButtonElement>('#logout')?.addEventListener('click', async () => {
     await fetch('/api/logout', { method: 'POST' });
     payload = null;
@@ -215,12 +310,12 @@ function bindChrome(): void {
 }
 
 async function boot(): Promise<void> {
-  app.innerHTML = '<p class="empty">불러오는 중…</p>';
+  app.innerHTML = `<p class="empty">${esc(t().loading)}</p>`;
   let res: Response;
   try {
-    res = await fetch('/api/content');
+    res = await fetch(`/api/content?lang=${lang}`);
   } catch {
-    renderGate('서버에 연결하지 못했습니다.');
+    renderGate(t().serverFailed);
     return;
   }
   if (res.status === 401) {
@@ -228,7 +323,7 @@ async function boot(): Promise<void> {
     return;
   }
   if (!res.ok) {
-    app.innerHTML = '<p class="empty">콘텐츠를 불러오지 못했습니다.</p>';
+    app.innerHTML = `<p class="empty">${esc(t().loadFailed)}</p>`;
     return;
   }
   payload = (await res.json()) as ContentPayload;
@@ -238,4 +333,5 @@ async function boot(): Promise<void> {
   renderList();
 }
 
+setLang(lang);
 void boot();
