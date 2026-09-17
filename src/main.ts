@@ -99,14 +99,8 @@ function renderList(): void {
     )
     .join('');
 
-  const note =
-    payload?.source === 'sample'
-      ? `<p class="note">지금은 예시 콘텐츠입니다. 노션 연동(NOTION_TOKEN, NOTION_DATABASE_ID)을
-         설정하면 노션에서 올린 내용이 바로 여기에 나타납니다. README를 참고하세요.</p>`
-      : '';
-
   app.innerHTML = chrome(
-    `<div class="list">${cards || '<p class="empty">아직 내용이 없습니다.</p>'}</div>${note}`,
+    `<div class="list">${cards || '<p class="empty">아직 내용이 없습니다.</p>'}</div>`,
   );
   bindChrome();
 

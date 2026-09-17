@@ -26,7 +26,7 @@ export interface Entry {
 }
 
 export interface ContentPayload {
-  source: 'notion' | 'sample';
+  source: 'files';
   updatedAt: string;
   entries: Entry[];
 }
@@ -45,42 +45,3 @@ export function parseVideoUrl(url: string | null | undefined): VideoRef | null {
   if (vm) return { provider: 'vimeo', id: vm[1] };
   return null;
 }
-
-/** 노션 미설정 상태에서도 사이트가 동작하도록 하는 예시 콘텐츠. */
-export const SAMPLE: Entry[] = [
-  {
-    id: 'sample-negroni',
-    title: '네그로니',
-    category: '칵테일',
-    summary: '진 30 / 캄파리 30 / 스위트 베르무트 30, 스터, 오렌지 필.',
-    order: 1,
-    cover: null,
-    video: null,
-    blocks: [
-      { type: 'heading', text: '레시피' },
-      { type: 'bullet', text: '진 30ml' },
-      { type: 'bullet', text: '캄파리 30ml' },
-      { type: 'bullet', text: '스위트 베르무트 30ml' },
-      { type: 'heading', text: '만드는 법' },
-      { type: 'number', text: '믹싱 글라스에 얼음을 채운다.' },
-      { type: 'number', text: '재료를 넣고 20초간 스터한다.' },
-      { type: 'number', text: '큰 얼음을 넣은 락 글라스에 따르고 오렌지 필을 짠다.' },
-    ],
-  },
-  {
-    id: 'sample-open',
-    title: '오픈 준비',
-    category: '운영',
-    summary: '영업 시작 60분 전부터의 표준 절차.',
-    order: 1,
-    cover: null,
-    video: null,
-    blocks: [
-      { type: 'number', text: '제빙기 확인, 얼음 분리 및 정리.' },
-      { type: 'number', text: '바 스테이션 세팅 — 지거, 스트레이너, 스푼, 리넨.' },
-      { type: 'number', text: '가니시 준비 (레몬·오렌지 필, 올리브).' },
-      { type: 'number', text: '백바 병 라벨 정면 정렬, 재고 부족분 기록.' },
-      { type: 'number', text: '음악·조명 세팅, 화장실 점검.' },
-    ],
-  },
-];

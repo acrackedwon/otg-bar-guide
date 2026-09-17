@@ -1,6 +1,6 @@
 import type { VercelRequest, VercelResponse } from '@vercel/node';
 import { hasValidSession } from '../lib/auth.js';
-import { loadContent } from '../lib/notion.js';
+import { loadContent } from '../lib/markdown.js';
 
 export default async function handler(req: VercelRequest, res: VercelResponse) {
   if (!hasValidSession(req)) {
@@ -8,8 +8,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     return;
   }
   try {
-    const payload = await loadContent();
-    // 노션 이미지 URL은 만료되므로 길게 캐시하지 않는다.
+    const payload = loadContent();
     res.setHeader('Cache-Control', 'private, max-age=60');
     res.status(200).json({ ok: true, ...payload });
   } catch (err) {
