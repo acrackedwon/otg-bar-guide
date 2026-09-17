@@ -19,16 +19,21 @@ Three pieces with a built-in strainer in the cap. No separate strainer needed, b
 
 For stirred drinks. Thick glass with a wide mouth. Fill it with ice and stir with a bar spoon.
 
-## Strainers
+## Strainer
 
 **Hawthorne**
-The one with a spring. Used against a shaker tin. This is the strainer you reach for most.
+The one with a spring. **This is the only strainer we use** — for the shaker and the mixing glass alike.
 
-**Julep**
-A perforated spoon shape. Used against a mixing glass.
+Sit it on the rim so the spring catches, hold the gate down with your index finger, and pour.
+Pushing the gate forward or back with that finger changes the gap; close it up to hold back more ice.
 
-**Fine strainer**
-A small mesh sieve held over the glass for double straining.
+## Fine strainer
+
+A separate tool used **together with** the Hawthorne, not instead of it.
+
+To **double strain**, hold the tin and Hawthorne in one hand and the fine strainer over the glass in the other, and pour through it. It catches ice shards and fragments of herb or fruit.
+
+Use it for shaken drinks served without ice — Daiquiri, Gimlet, Espresso Martini. Ice shards left floating keep melting in the glass and water down the last mouthful.
 
 ## Bar spoon
 
