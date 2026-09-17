@@ -1,6 +1,7 @@
 ---
 title: Coffee Martini
 category: Cocktails
+group: Recipes
 summary: Built on dissolved Maxim coffee. Boston, double strained.
 order: 428
 video:

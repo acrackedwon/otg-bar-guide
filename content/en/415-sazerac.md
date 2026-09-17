@@ -1,6 +1,7 @@
 ---
 title: Sazerac
 category: Cocktails
+group: Recipes
 summary: Cognac 60 / Ango 2 / Peychaud 6 / Rich demerara 10. Absinthe sprayed in the glass.
 order: 415
 video:

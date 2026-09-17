@@ -1,6 +1,7 @@
 ---
 title: Dry Martini
 category: Cocktails
+group: Recipes
 summary: Tanqueray No. Ten 60 / Noilly Prat 7.5. Stir 30–35.
 order: 410
 video:

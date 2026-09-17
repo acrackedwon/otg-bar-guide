@@ -1,6 +1,7 @@
 ---
 title: Negroni
 category: Cocktails
+group: Recipes
 summary: Two methods. The second is built in the rocks glass.
 order: 417
 video:

@@ -1,6 +1,7 @@
 ---
 title: How to Read the Recipes
 category: Cocktails
+group: Fundamentals
 summary: Units, ice sizes, syrups and technique terms used throughout.
 order: 409
 video:

@@ -56,6 +56,7 @@ function storedLang(): Lang {
 let lang: Lang = storedLang();
 let payload: ContentPayload | null = null;
 let activeCategory = '';
+let activeGroup: string | null = null;
 let activeEntryId: string | null = null;
 
 function t(): (typeof UI)[Lang] {
@@ -160,6 +161,17 @@ function categories(entries: Entry[]): string[] {
   return seen;
 }
 
+/** 현재 분류 안의 하위 구분. 하나 이하면 하위 탭을 그리지 않는다. */
+function groups(): string[] {
+  const seen: string[] = [];
+  for (const entry of payload?.entries ?? []) {
+    if (entry.category !== activeCategory) continue;
+    const name = entry.group;
+    if (name && !seen.includes(name)) seen.push(name);
+  }
+  return seen;
+}
+
 function chrome(inner: string): string {
   const cats = categories(payload?.entries ?? []);
   const tabs = cats
@@ -185,7 +197,27 @@ function chrome(inner: string): string {
 }
 
 function renderList(): void {
-  const entries = (payload?.entries ?? []).filter((e) => e.category === activeCategory);
+  const sub = groups();
+  if (sub.length > 1 && (activeGroup === null || !sub.includes(activeGroup))) {
+    activeGroup = sub[0];
+  }
+  if (sub.length <= 1) activeGroup = null;
+
+  const entries = (payload?.entries ?? []).filter(
+    (e) => e.category === activeCategory && (activeGroup === null || e.group === activeGroup),
+  );
+
+  const subtabs =
+    sub.length > 1
+      ? `<div class="subtabs" role="tablist">${sub
+          .map(
+            (name) =>
+              `<button class="subtab" role="tab" data-group="${esc(name)}" aria-selected="${
+                name === activeGroup
+              }">${esc(name)}</button>`,
+          )
+          .join('')}</div>`
+      : '';
   const cards = entries
     .map(
       (entry) => `
@@ -198,9 +230,16 @@ function renderList(): void {
     .join('');
 
   app.innerHTML = chrome(
-    `<div class="list">${cards || `<p class="empty">${esc(t().empty)}</p>`}</div>`,
+    `${subtabs}<div class="list">${cards || `<p class="empty">${esc(t().empty)}</p>`}</div>`,
   );
   bindChrome();
+
+  app.querySelectorAll<HTMLButtonElement>('.subtab').forEach((tab) => {
+    tab.addEventListener('click', () => {
+      activeGroup = tab.dataset.group!;
+      renderList();
+    });
+  });
 
   app.querySelectorAll<HTMLButtonElement>('.card').forEach((card) => {
     card.addEventListener('click', () => {
@@ -274,7 +313,7 @@ function renderDetail(): void {
 
   app.innerHTML = chrome(`
     <div class="detail">
-      <button class="back" id="back">← ${esc(entry.category)}</button>
+      <button class="back" id="back">← ${esc(entry.group ?? entry.category)}</button>
       <h1>${esc(entry.title)}</h1>
       ${entry.summary ? `<p class="summary">${esc(entry.summary)}</p>` : ''}
       ${video}${cover}
@@ -283,6 +322,7 @@ function renderDetail(): void {
   bindChrome();
 
   document.querySelector<HTMLButtonElement>('#back')!.addEventListener('click', () => {
+    if (entry.group) activeGroup = entry.group;
     activeEntryId = null;
     window.scrollTo(0, 0);
     renderList();
@@ -304,6 +344,7 @@ function bindChrome(): void {
   app.querySelectorAll<HTMLButtonElement>('.tab').forEach((tab) => {
     tab.addEventListener('click', () => {
       activeCategory = tab.dataset.category!;
+      activeGroup = null;
       renderList();
     });
   });

@@ -1,6 +1,7 @@
 ---
 title: Old Fashioned
 category: Cocktails
+group: Recipes
 summary: Two versions. The rye one differs in pour order and stir count.
 order: 414
 video:

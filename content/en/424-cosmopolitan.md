@@ -1,6 +1,7 @@
 ---
 title: Cosmopolitan
 category: Cocktails
+group: Recipes
 summary: Vodka 30 / Triple sec 10 / Cranberry 15 / Lime 15 / Rich syrup 1 bsp. Shaken.
 order: 424
 video:

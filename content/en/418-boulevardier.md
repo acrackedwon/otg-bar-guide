@@ -1,6 +1,7 @@
 ---
 title: Boulevardier
 category: Cocktails
+group: Recipes
 summary: Maker's Mark 40 / Campari 20 / Cinzano Rosso 22.5.
 order: 418
 video:

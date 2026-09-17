@@ -1,6 +1,7 @@
 ---
 title: Vesper
 category: Cocktails
+group: Recipes
 summary: Gordon's 45 / Vodka 15 / Cocchi Americano 7.5.
 order: 412
 video:

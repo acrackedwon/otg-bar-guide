@@ -1,6 +1,7 @@
 ---
 title: Curated Cocktails
 category: Cocktails
+group: Fundamentals
 summary: Our signature menu.
 order: 405
 video:

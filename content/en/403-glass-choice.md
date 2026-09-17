@@ -1,6 +1,7 @@
 ---
 title: Choosing the Glass
 category: Cocktails
+group: Fundamentals
 summary: Ice means rocks, no ice means stemmed, long and fizzy means highball.
 order: 403
 video:

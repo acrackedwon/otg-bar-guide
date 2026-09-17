@@ -1,6 +1,7 @@
 ---
 title: Sidecar
 category: Cocktails
+group: Recipes
 summary: Hennessy 45 / Lemon 15. Cobbler. Do not over-chill.
 order: 419
 video:

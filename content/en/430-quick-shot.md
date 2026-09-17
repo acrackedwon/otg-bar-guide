@@ -1,6 +1,7 @@
 ---
 title: Quick Shot
 category: Cocktails
+group: Recipes
 summary: Lit in a Turkish coffee pot and thrown. Served in a rocks glass.
 order: 430
 video:

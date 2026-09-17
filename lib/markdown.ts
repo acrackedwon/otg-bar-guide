@@ -155,6 +155,7 @@ function contentRoot(): string | null {
 const KEYS = {
   title: ['제목', 'title'],
   category: ['분류', 'category'],
+  group: ['하위분류', 'group'],
   summary: ['요약', 'summary'],
   order: ['순서', 'order'],
   video: ['영상', 'video'],
@@ -187,6 +188,7 @@ function readDir(dir: string): Map<string, Entry> {
       id,
       title,
       category: pick(meta, KEYS.category) || '기타',
+      group: pick(meta, KEYS.group) || null,
       summary: pick(meta, KEYS.summary) ?? '',
       order: Number.isFinite(order) ? order : 999,
       cover: meta['대표사진'] || meta['cover'] || null,

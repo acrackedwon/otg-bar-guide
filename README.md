@@ -20,7 +20,7 @@ content/ko/*.md     한국어 콘텐츠. 파일 하나 = 항목 하나
 content/en/*.md     영어 콘텐츠. 같은 파일 이름끼리 짝을 이룹니다
 CLAUDE.md           작업 규칙 (다국어 필수, 매장 정보 추측 금지 등)
 index.html          진입점
-src/main.ts         화면 전체 (로그인 → 탭 목록 → 상세)
+src/main.ts         화면 전체 (로그인 → 탭 → 하위 탭 → 목록 → 상세)
 src/video.ts        {제공자, 영상ID} → 임베드 URL. 영상 제공자 교체 지점
 src/styles.css      스타일 (모바일 우선, 다크)
 api/login.ts        비밀번호 확인 후 세션 쿠키 발급

@@ -1,6 +1,7 @@
 ---
 title: Margarita
 category: Cocktails
+group: Recipes
 summary: Blanco tequila 45 / Lime 20 / Cointreau 15 / Agave 5. Cobbler.
 order: 426
 video:

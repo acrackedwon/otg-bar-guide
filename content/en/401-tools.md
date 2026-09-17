@@ -1,6 +1,7 @@
 ---
 title: Bar Tools
 category: Cocktails
+group: Fundamentals
 summary: Shakers, mixing glass, strainers, bar spoon.
 order: 401
 video:

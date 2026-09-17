@@ -1,6 +1,7 @@
 ---
 title: Whiskey Sour
 category: Cocktails
+group: Recipes
 summary: Maker's Mark 45 / Lemon 15 / Simple 15 / Egg white. Boston.
 order: 416
 video:

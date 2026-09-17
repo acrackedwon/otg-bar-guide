@@ -1,6 +1,7 @@
 ---
 title: Gimlet
 category: Cocktails
+group: Recipes
 summary: Tanqueray 45 / Lime 15 / Simple 10. Cobbler.
 order: 423
 video:

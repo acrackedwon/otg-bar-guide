@@ -216,3 +216,27 @@ header.top {
 }
 .lang__btn[aria-pressed='true'] { color: #16130f; background: var(--accent); }
 .gate .lang { margin-top: 4px; }
+
+/* ---- 하위 탭 ---- */
+.subtabs {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  padding: 14px 2px 10px;
+  border-bottom: 1px solid var(--line);
+  margin-bottom: 14px;
+  scrollbar-width: none;
+}
+.subtabs::-webkit-scrollbar { display: none; }
+.subtab {
+  flex: 0 0 auto;
+  padding: 2px 0 8px;
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--muted);
+  background: none;
+  border-radius: 0;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -11px;
+}
+.subtab[aria-selected='true'] { color: var(--text); border-bottom-color: var(--accent); }

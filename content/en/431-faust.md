@@ -1,6 +1,7 @@
 ---
 title: Faust
 category: Cocktails
+group: Recipes
 summary: Ron Diaz 22.5 / Bacardi 22.5 / Cassis 22.5 / Malibu 10. Rocks, stirred.
 order: 431
 video:

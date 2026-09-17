@@ -1,6 +1,7 @@
 ---
 title: Manhattan
 category: Cocktails
+group: Recipes
 summary: Wild Turkey 101 Rye 60 / Cinzano Rosso 20 / Angostura 3 dashes. Stirred.
 order: 413
 video:

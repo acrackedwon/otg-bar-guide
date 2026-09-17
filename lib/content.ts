@@ -20,6 +20,8 @@ export interface Entry {
   id: string;
   title: string;
   category: string;
+  /** 분류 안의 하위 구분. 없으면 null. 같은 분류에 하나라도 있으면 하위 탭이 생긴다. */
+  group: string | null;
   summary: string;
   order: number;
   cover: string | null;

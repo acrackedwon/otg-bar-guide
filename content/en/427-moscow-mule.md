@@ -1,6 +1,7 @@
 ---
 title: Moscow Mule
 category: Cocktails
+group: Recipes
 summary: Vodka 45 / Ginger syrup 15 / Lime 15 / Ango 2. Topped with ginger ale.
 order: 427
 video:

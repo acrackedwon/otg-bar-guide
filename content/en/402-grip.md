@@ -1,6 +1,7 @@
 ---
 title: Shaking and Stirring
 category: Cocktails
+group: Fundamentals
 summary: How to hold, seal, shake and stir.
 order: 402
 video:

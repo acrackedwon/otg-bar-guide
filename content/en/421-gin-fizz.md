@@ -1,6 +1,7 @@
 ---
 title: Gin Fizz
 category: Cocktails
+group: Recipes
 summary: Tanqueray 45 / Lemon 15 / Simple 10. Cobbler, topped with soda.
 order: 421
 video:

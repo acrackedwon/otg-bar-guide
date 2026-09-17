@@ -1,6 +1,7 @@
 ---
 title: Daiquiri
 category: Cocktails
+group: Recipes
 summary: Four versions, each with a different rum blend and shaker.
 order: 422
 video:
