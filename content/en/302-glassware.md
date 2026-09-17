@@ -1,7 +1,7 @@
 ---
 title: Glassware
 category: Basics
-summary: Rocks, coupe, collins, highball, Nick & Nora — names and uses.
+summary: Rocks, highball, coupe, Nick & Nora, Glencairn, snifter — names and uses.
 order: 302
 video:
 published: true
@@ -12,14 +12,8 @@ published: true
 **Rocks / Old Fashioned**
 Heavy base, wide mouth. For drinks served over a single large cube. Old Fashioned, Negroni.
 
-**Double Old Fashioned**
-A larger rocks glass, for longer drinks served over ice.
-
 **Highball**
-Tall and straight. For long carbonated drinks. Gin & Tonic, highballs.
-
-**Collins**
-Taller and narrower than a highball. Tom Collins, Mojito.
+Tall and straight. For long carbonated drinks. Gin & Tonic, highballs, Mojito.
 
 **Shot glass**
 For spirits served straight.
@@ -37,6 +31,14 @@ The classic V shape. The wide mouth makes it easy to spill.
 
 **Flute**
 Tall and narrow. Sparkling wine and carbonated cocktails.
+
+**Glencairn**
+A small tulip-shaped glass **for tasting whisky**. The wide bowl opens the aroma up and the narrow rim gathers it.
+Use it for single malts and for any whisky a guest is drinking neat to nose it.
+
+**Snifter (brandy glass)**
+Wide belly, narrow rim. Brandy, cognac, aged rum.
+Traditionally cupped in the palm so body heat warms the spirit — **unlike every other glass, it is fine to hold this one by the bowl.** Pour little enough that it would not spill if the glass were laid on its side.
 
 ## Handling
 

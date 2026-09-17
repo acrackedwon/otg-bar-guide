@@ -13,8 +13,10 @@ published: true
 |---|---|
 | Chilled, no ice (up) | Coupe / Nick & Nora |
 | Over a single large cube | Rocks |
-| Long and carbonated | Highball / Collins |
-| Spirit neat | Shot glass or small tumbler |
+| Long and carbonated | Highball |
+| Whisky neat, to be nosed | Glencairn |
+| Brandy, cognac, aged rum | Snifter |
+| Other spirits neat | Shot glass or small tumbler |
 | Sparkling | Flute |
 
 ## Preparing the glass

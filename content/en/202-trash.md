@@ -1,21 +1,32 @@
 ---
 title: Where the Rubbish Goes
 category: Cleaning
-summary: Location, days and times for putting waste out.
+summary: Weekdays, all together at the ground-floor street zone. Weekends, sorted at the recycling area.
 order: 202
 video:
-published: false
+published: true
 ---
 
-> **Not written yet.** This entry is waiting on details from the owner.
-> Once filled in, set `published: true`.
+## Weekdays (Mon–Fri)
 
-## Needed
+After closing, gather the day's waste and put it out **all together** at the **street-side waste zone on the ground floor**. No sorting needed.
 
-- Where does the rubbish go? (which side of the building, which floor)
-- Which days and times? Does it vary by type?
-- Where are the municipal bags kept?
-- Are glass bottles collected separately, or by a contractor?
-- Where is the food waste bin and how is it emptied?
+## Weekends (Sat–Sun)
 
-> One photo beats ten lines of text here. A picture of the collection point would do it.
+**It has to be sorted at the ground-floor recycling area.**
+It cannot go out all together the way it does on weekdays — separate it by type.
+
+See "Sorting Waste" for how to sort.
+
+## Where it collects inside
+
+| Type | Where |
+|---|---|
+| Glass bottles | Red sack in the kitchen |
+| Empty Cass bottles | The Cass crate (one at a time, standing up) |
+| Paper | White bucket beside the kitchen sink |
+| Cans | Crushed underfoot, then out |
+| Plastics | Straight out |
+
+> Photos would stop new staff having to hunt for these. Four spots worth shooting:
+> the red sack, the Cass crate, the white bucket, and the ground-floor drop-off.

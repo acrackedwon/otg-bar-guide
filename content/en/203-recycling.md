@@ -1,56 +1,49 @@
 ---
-title: Recycling
+title: Sorting Waste
 category: Cleaning
-summary: How to sort. Our collection point and days are in a separate entry.
+summary: Bottles go in the red sack. Cass bottles have their own crate. Paper goes in the white bucket.
 order: 203
 video:
 published: true
 ---
 
-> Our collection point and days will be covered in the "Where the Rubbish Goes" entry.
+## Collecting inside the bar
 
-## Glass bottles
+**Glass bottles — the red sack in the kitchen**
+Most bottles just go straight in.
 
-The bulk of what a bar produces.
+**Cass beer bottles — their own crate (the exception)**
+Empty Cass bottles do not go in the sack. They go in the **separate Cass crate**, placed in **one at a time, standing up**. Thrown in they break, and broken ones cannot be returned.
 
-- **Empty and rinse them.**
-- Paper labels can stay on, though removing them is better.
-- Separate the caps — metal goes with cans, plastic with plastics.
-- **Broken glass is not recyclable.** Wrap it in newspaper, put it in general waste and mark it as glass.
-- Bottles covered by the deposit-refund scheme are kept separately.
+**Cans**
+They can go straight in, but **crush them underfoot if you can**. The sack fills up fast otherwise.
 
-## Cans
+**Plastics**
+Straight in, no preparation.
 
-Rinse, and crush them if you can.
+**Paper — the white bucket beside the kitchen sink**
+Paper has its own place. Flatten boxes before they go in.
 
-## Plastics
+## Taking it out
 
-Rinse and remove labels. Clear PET bottles are collected separately.
+**Weekdays (Mon–Fri)**
+Gather the day's waste and take it out **all together after closing, to the street-side waste zone on the ground floor**. No sorting needed.
 
-## Paper
+**Weekends (Sat–Sun)**
+**It must be sorted at the ground-floor recycling area.** It cannot go out all together the way it does on weekdays.
 
-- Flatten boxes; remove tape and shipping labels.
-- **Paper with oil or food on it is not recyclable** — that is general waste.
-- Receipts (thermal paper) and coated paper are general waste too.
+> See "Where the Rubbish Goes" for the exact locations.
 
-## Food waste
-
-- Fruit peel and vegetables count as food waste.
-- **Bones, shells, large seeds, tea bags and coffee grounds do not.** They are general waste.
-- Citrus peel can go in food waste, but drain it when there is a lot.
-
-## General waste
-
-Everything else, in the official municipal bag.
-
-## Commonly confused
+## Weekend sorting — commonly confused
 
 | Item | Goes in |
 |---|---|
-| Broken glass, drinking glasses | General (wrapped) |
+| Broken glass, drinking glasses | General (wrapped in paper) |
 | Corks | General |
 | Foil and foil-lined wrappers | General |
 | Straws, disposable gloves | General |
 | Coffee grounds | General |
-| Fruit stones | General |
+| Fruit stones, bones, shells | General (not food waste) |
 | Wooden chopsticks, picks | General |
+| Fruit peel, vegetables | Food waste |
+| Oily paper, receipts | General (not recyclable) |
