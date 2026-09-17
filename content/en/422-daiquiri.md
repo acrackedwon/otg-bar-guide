@@ -1,7 +1,7 @@
 ---
 title: Daiquiri
 category: Cocktails
-summary: ₩22,000 · Four versions, each with a different rum blend and shaker.
+summary: Four versions, each with a different rum blend and shaker.
 order: 422
 video:
 published: true

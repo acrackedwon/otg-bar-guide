@@ -1,7 +1,7 @@
 ---
 title: Gimlet
 category: Cocktails
-summary: ₩22,000 · Tanqueray 45 / Lime 15 / Simple 10. Cobbler.
+summary: Tanqueray 45 / Lime 15 / Simple 10. Cobbler.
 order: 423
 video:
 published: true

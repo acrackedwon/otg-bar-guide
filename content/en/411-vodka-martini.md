@@ -1,7 +1,7 @@
 ---
 title: Vodka Martini
 category: Cocktails
-summary: ₩23,000 · Vodka 45 / Noilly Prat 7.5. Shaken.
+summary: House cocktail vodka 45 / Noilly Prat 7.5. Shaken.
 order: 411
 video:
 published: true
@@ -9,7 +9,7 @@ published: true
 
 ## Build
 
-- Vodka 45ml
+- **The house cocktail vodka** 45ml
 - Noilly Prat 7.5ml
 
 ## Method

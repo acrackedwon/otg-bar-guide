@@ -1,7 +1,7 @@
 ---
 title: Coffee Martini
 category: Cocktails
-summary: ₩20,000 · Built on dissolved Maxim coffee. Boston, double strained.
+summary: Built on dissolved Maxim coffee. Boston, double strained.
 order: 428
 video:
 published: true

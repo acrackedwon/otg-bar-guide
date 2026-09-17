@@ -1,7 +1,7 @@
 ---
 title: Penicillin
 category: Cocktails
-summary: ₩25,000 · Johnnie Walker Black base, with Laphroaig 10 floated on top.
+summary: Johnnie Walker Black base, with Laphroaig 10 floated on top.
 order: 429
 video:
 published: true

@@ -1,7 +1,7 @@
 ---
 title: Cosmopolitan
 category: Cocktails
-summary: ₩21,000 · Vodka 30 / Triple sec 10 / Cranberry 15 / Lime 15 / Rich syrup 1 bsp.
+summary: Vodka 30 / Triple sec 10 / Cranberry 15 / Lime 15 / Rich syrup 1 bsp. Shaken.
 order: 424
 video:
 published: true
@@ -14,3 +14,7 @@ published: true
 - Cranberry 15ml
 - Lime 15ml
 - Rich syrup 1 bar spoon
+
+## Method
+
+Shake. Either shaker, cobbler or Boston, is fine.

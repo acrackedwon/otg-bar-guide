@@ -1,7 +1,7 @@
 ---
 title: Dry Martini
 category: Cocktails
-summary: ₩23,000 · Tanqueray No. Ten 60 / Noilly Prat 7.5. Stir 30–35.
+summary: Tanqueray No. Ten 60 / Noilly Prat 7.5. Stir 30–35.
 order: 410
 video:
 published: true

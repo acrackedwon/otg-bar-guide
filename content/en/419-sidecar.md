@@ -1,7 +1,7 @@
 ---
 title: Sidecar
 category: Cocktails
-summary: ₩25,000 · Hennessy 45 / Lemon 15. Cobbler. Do not over-chill.
+summary: Hennessy 45 / Lemon 15. Cobbler. Do not over-chill.
 order: 419
 video:
 published: true

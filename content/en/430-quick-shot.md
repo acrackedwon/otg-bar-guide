@@ -1,7 +1,7 @@
 ---
 title: Quick Shot
 category: Cocktails
-summary: ₩21,000 · Lit in a Turkish coffee pot and thrown. Served in a rocks glass.
+summary: Lit in a Turkish coffee pot and thrown. Served in a rocks glass.
 order: 430
 video:
 published: true
@@ -9,7 +9,7 @@ published: true
 
 ## Build
 
-- Cassis 15ml
+- DeKuyper Cassis 15ml
 - Peachtree 15ml
 - Ron Diaz 30ml
 

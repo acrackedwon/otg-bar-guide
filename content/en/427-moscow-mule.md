@@ -1,7 +1,7 @@
 ---
 title: Moscow Mule
 category: Cocktails
-summary: ₩21,000 · Vodka 45 / Ginger syrup 15 / Lime 15 / Ango 2. Topped with ginger ale.
+summary: Vodka 45 / Ginger syrup 15 / Lime 15 / Ango 2. Topped with ginger ale.
 order: 427
 video:
 published: true

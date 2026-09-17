@@ -1,7 +1,7 @@
 ---
 title: Gin Fizz
 category: Cocktails
-summary: ₩21,000 · Gin 45 / Lemon 15 / Simple 10. Cobbler.
+summary: Tanqueray 45 / Lemon 15 / Simple 10. Cobbler, topped with soda.
 order: 421
 video:
 published: true
@@ -9,13 +9,13 @@ published: true
 
 ## Build
 
-- Gin 45ml
+- Tanqueray 45ml
 - Lemon 15ml
 - Simple syrup 10ml
 
 ## Method
 
-Cobbler shaker.
+Cobbler shaker, then **top up with soda**.
 
 ## Garnish
 

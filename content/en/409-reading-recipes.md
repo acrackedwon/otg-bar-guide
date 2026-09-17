@@ -33,7 +33,7 @@ Bigger cubes melt slower. They go in stirred drinks and anything meant to be sip
 | Name | Means |
 |---|---|
 | Simple syrup | Sugar and water, 1:1 |
-| Rich syrup | Twice the sugar (2:1). Sweeter and thicker |
+| Rich syrup | Twice the **white** sugar (2:1). Sweeter and thicker |
 | Rich demerara | Rich syrup made with demerara sugar. Darker, with molasses character |
 | Ginger syrup | Ginger syrup |
 | Saline solution | Salt water. A few drops sharpen the line between sweet and sour |
@@ -42,7 +42,7 @@ Bigger cubes melt slower. They go in stirred drinks and anything meant to be sip
 
 **Throwing**
 Pouring the liquid in a long stream between two tins to mix it. It aerates without the foam a shake creates.
-Used where shaking would wreck the texture, as in a Bloody Mary.
+The Quick Shot is made this way.
 
 **Floating**
 Leaving the last ingredient **sitting on top** rather than mixed in — poured slowly over the back of a bar spoon.

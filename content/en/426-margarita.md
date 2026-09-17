@@ -1,7 +1,7 @@
 ---
 title: Margarita
 category: Cocktails
-summary: ₩21,000 · Blanco tequila 45 / Lime 20 / Cointreau 15 / Agave 5. Cobbler.
+summary: Blanco tequila 45 / Lime 20 / Cointreau 15 / Agave 5. Cobbler.
 order: 426
 video:
 published: true
