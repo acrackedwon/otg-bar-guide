@@ -12,7 +12,9 @@ export type Block =
   | { type: 'heading'; text: string }
   | { type: 'bullet'; text: string }
   | { type: 'number'; text: string }
-  | { type: 'image'; url: string; caption: string };
+  | { type: 'image'; url: string; caption: string }
+  | { type: 'note'; text: string }
+  | { type: 'table'; head: string[]; rows: string[][] };
 
 export interface Entry {
   id: string;

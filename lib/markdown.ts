@@ -35,15 +35,44 @@ function splitFrontMatter(raw: string): { meta: FrontMatter; body: string } {
 }
 
 /** 가이드에 필요한 만큼의 마크다운만 해석한다: 제목, 목록, 사진, 문단. */
+function splitRow(line: string): string[] {
+  return line
+    .replace(/^\|/, '')
+    .replace(/\|$/, '')
+    .split('|')
+    .map((cell) => cell.trim());
+}
+
+const SEPARATOR = /^\|?[\s:|-]+\|[\s:|-]*$/;
+
 export function parseBody(body: string): Block[] {
   const blocks: Block[] = [];
   let paragraph: string[] = [];
+  let note: string[] = [];
+  let table: string[][] = [];
+
+  const flushNote = () => {
+    if (note.length) {
+      blocks.push({ type: 'note', text: note.join(' ') });
+      note = [];
+    }
+  };
+
+  const flushTable = () => {
+    if (table.length) {
+      const [head, ...rows] = table;
+      blocks.push({ type: 'table', head, rows });
+      table = [];
+    }
+  };
 
   const flush = () => {
     if (paragraph.length) {
       blocks.push({ type: 'paragraph', text: paragraph.join(' ') });
       paragraph = [];
     }
+    flushNote();
+    flushTable();
   };
 
   for (const rawLine of body.split('\n')) {
@@ -53,6 +82,23 @@ export function parseBody(body: string): Block[] {
       flush();
       continue;
     }
+
+    if (line.startsWith('|') && line.endsWith('|')) {
+      if (paragraph.length || note.length) flush();
+      if (!SEPARATOR.test(line)) table.push(splitRow(line));
+      continue;
+    }
+    flushTable();
+
+    const quote = line.match(/^>\s?(.*)$/);
+    if (quote) {
+      if (paragraph.length) flush();
+      note.push(quote[1].trim());
+      continue;
+    }
+    flushNote();
+
+    if (/^(-{3,}|\*{3,}|_{3,})$/.test(line)) continue; // 구분선은 버린다
 
     const heading = line.match(/^#{1,6}\s+(.*)$/);
     if (heading) {

@@ -15,6 +15,11 @@ function esc(value: string): string {
     .replace(/"/g, '&quot;');
 }
 
+/** 본문 안의 **굵게** 표시만 해석한다. esc() 뒤에 적용해야 안전하다. */
+function inline(value: string): string {
+  return esc(value).replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>');
+}
+
 /* ---------------- 로그인 ---------------- */
 
 function renderGate(message = ''): void {
@@ -134,12 +139,20 @@ function renderBlocks(blocks: Block[]): string {
         out.push(`<${want}>`);
         listType = want;
       }
-      out.push(`<li>${esc(block.text)}</li>`);
+      out.push(`<li>${inline(block.text)}</li>`);
       continue;
     }
     closeList();
     if (block.type === 'heading') out.push(`<h3>${esc(block.text)}</h3>`);
-    else if (block.type === 'paragraph') out.push(`<p>${esc(block.text)}</p>`);
+    else if (block.type === 'paragraph') out.push(`<p>${inline(block.text)}</p>`);
+    else if (block.type === 'note') out.push(`<p class="note">${inline(block.text)}</p>`);
+    else if (block.type === 'table') {
+      const head = block.head.map((cell) => `<th>${inline(cell)}</th>`).join('');
+      const rows = block.rows
+        .map((row) => `<tr>${row.map((cell) => `<td>${inline(cell)}</td>`).join('')}</tr>`)
+        .join('');
+      out.push(`<table><thead><tr>${head}</tr></thead><tbody>${rows}</tbody></table>`);
+    }
     else if (block.type === 'image') {
       out.push(
         `<figure><img src="${esc(block.url)}" alt="${esc(block.caption)}" loading="lazy" />${

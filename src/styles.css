@@ -183,3 +183,21 @@ header.top {
   border-radius: var(--radius);
 }
 .empty { color: var(--muted); text-align: center; padding: 60px 0; }
+
+.detail table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 8px 0 18px;
+  font-size: 14px;
+}
+.detail th, .detail td {
+  padding: 9px 10px;
+  text-align: left;
+  border-bottom: 1px solid var(--line);
+  line-height: 1.5;
+  vertical-align: top;
+}
+.detail th { color: var(--accent); font-weight: 600; white-space: nowrap; }
+.detail td:first-child { white-space: nowrap; }
+.detail strong { color: #fff; font-weight: 600; }
+.detail .note { margin: 14px 0 18px; }
