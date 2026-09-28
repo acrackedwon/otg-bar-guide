@@ -18,6 +18,10 @@ published: true
 2. Set the small tin in **at a slight angle**. Straight down and it will not release.
 3. Tap the top once with your palm to seal.
 
+![A sealed Boston shaker](/photos/boston-closed-side.jpg)
+
+![The sealed seam](/photos/boston-closed-up.jpg)
+
 ### Holding
 
 - **One hand under the large tin, the other wrapped over the small tin.**

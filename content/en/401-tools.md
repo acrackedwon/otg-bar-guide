@@ -16,6 +16,10 @@ A large metal tin with a smaller tin (or pint glass). Fast and easy to clean, wh
 **Cobbler shaker**
 Three pieces with a built-in strainer in the cap. No separate strainer needed, but it jams when it freezes up.
 
+![Cobbler shakers](/photos/cobbler-shakers.jpg)
+
+![The top of the cobbler shaker](/photos/cobbler-up.jpg)
+
 ## Mixing glass
 
 For stirred drinks. Thick glass with a wide mouth. Fill it with ice and stir with a bar spoon.

@@ -12,11 +12,17 @@ published: true
 | Which | Holds |
 |---|---|
 | **Left** — the taller one | Red |
-| **Right** — the shorter one | White |
+| **Right** — the shorter one (WIB) | White |
+
+![Left tall cellar holds red, right shorter one holds white](/photos/wine-cellar.jpg)
 
 ## Sparkling
 
 It lives in the **kitchen under-counter fridge**, not in the cellars.
+
+![The kitchen under-counter fridge](/photos/kitchen-fridge.jpg)
+
+![Sparkling inside the fridge](/photos/kitchen-fridge-inside-sparkling.jpg)
 
 ## Before serving
 
