@@ -2,7 +2,7 @@
 title: Long Island Iced Tea Pre-Mix
 category: Cocktails
 group: Recipes
-summary: Gin, vodka, rum, tequila and triple sec in equal parts, batched into a 1L bottle.
+summary: Five spirits in equal parts. Divide the space you need to fill by five.
 order: 432
 video:
 published: true
@@ -26,14 +26,27 @@ Five spirits in **equal parts**:
 
 ## Making it
 
-The pre-mix bottle holds **1 litre**. Five equal parts means **200ml of each**.
+**There is no fixed amount. Look at the space you need to fill and divide it by five.**
 
-1. Measure **200ml of each** of the five into a beaker.
-2. **Stir it enough to combine.**
-3. Pour it into the pre-mix bottle.
+1. Look at the bottle and judge **how much it needs**.
+2. **Divide that by five.** That is how much of each spirit goes in.
+3. Measure that amount of each of the five into a beaker.
+4. **Stir it enough to combine.**
+5. Pour it into the bottle.
 
-> For a bottle of another size, divide its volume by five.
-> (A 750ml bottle takes 150ml of each.)
+### Worked examples
+
+The pre-mix bottle holds **1 litre**.
+
+| Bottle | To fill | Each spirit |
+|---|---|---|
+| Empty | 1000ml | **200ml** |
+| Half left | 500ml | **100ml** |
+| A quarter left | 750ml | **150ml** |
+| Just topping up | 250ml | **50ml** |
+
+It does not have to be exact. **Eyeball it.**
+What matters is not the total but that the **five are in equal amounts**.
 
 ## Not written yet
 
