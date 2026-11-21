@@ -240,3 +240,5 @@ header.top {
   margin-bottom: -11px;
 }
 .subtab[aria-selected='true'] { color: var(--text); border-bottom-color: var(--accent); }
+
+.detail a { color: var(--accent); text-underline-offset: 3px; }

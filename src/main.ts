@@ -81,9 +81,14 @@ function esc(value: string): string {
     .replace(/"/g, '&quot;');
 }
 
-/** 본문 안의 **굵게** 표시만 해석한다. esc() 뒤에 적용해야 안전하다. */
+/** 본문 안의 **굵게** 와 [링크](https://...) 만 해석한다. esc() 뒤에 적용해야 안전하다. */
 function inline(value: string): string {
-  return esc(value).replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>');
+  return esc(value)
+    .replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>')
+    .replace(
+      /\[([^\]]+)\]\((https?:\/\/[^)\s]+)\)/g,
+      '<a href="$2" target="_blank" rel="noopener noreferrer">$1</a>',
+    );
 }
 
 /* ---------------- 로그인 ---------------- */

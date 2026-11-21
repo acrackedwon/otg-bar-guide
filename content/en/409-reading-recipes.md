@@ -55,6 +55,11 @@ Topping the rest of the glass with a carbonated mixer.
 **Double strain**
 Straining through a fine strainer as well as the Hawthorne.
 
+## Lime juice
+
+Wherever a recipe calls for **lime juice**, use **pseudo juice**. We do not stock limes.
+See the "Pseudo Juice" entry for how it is made.
+
 ## When a recipe has several versions
 
 Old Fashioned, Negroni, Daiquiri and Sidecar each have more than one method.
