@@ -2,7 +2,7 @@
 title: Pseudo Juice
 category: Cocktails
 group: Fundamentals
-summary: Our stand-in for lime juice. Made about every two weeks — always write the date on it.
+summary: Used in place of lime juice. Made about every two weeks — always write the date on it.
 order: 406
 video:
 published: true
@@ -10,8 +10,10 @@ published: true
 
 ## Why we use it
 
-Now and then a guest asks for a cocktail with lime, but not often enough for us to keep limes in stock.
-So we use **pseudo juice in place of lime juice**.
+Limes are used **for garnish only**. Cut into sixths, one lime garnishes several drinks.
+
+**Squeezed for juice, though, a lime gives only about 30ml.** The yield is too poor, so
+**lime juice is replaced with pseudo juice**.
 
 It is made **about once every two weeks**.
 

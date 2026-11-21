@@ -21,4 +21,4 @@ Cobbler shaker, then **top up with ginger ale**.
 
 ## Garnish
 
-**The squeezed lime half**
+A lime wedge (**one-sixth of a lime**)

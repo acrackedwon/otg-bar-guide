@@ -57,7 +57,7 @@ Straining through a fine strainer as well as the Hawthorne.
 
 ## Lime juice
 
-Wherever a recipe calls for **lime juice**, use **pseudo juice**. We do not stock limes.
+Wherever a recipe calls for **lime juice**, use **pseudo juice**. Do not squeeze limes — they are for garnish (one-sixth wedges) only.
 See the "Pseudo Juice" entry for how it is made.
 
 ## When a recipe has several versions
