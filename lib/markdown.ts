@@ -128,10 +128,11 @@ export function parseBody(body: string): Block[] {
       continue;
     }
 
-    const numbered = line.match(/^\d+[.)]\s+(.*)$/);
+    const numbered = line.match(/^(\d+)[.)]\s+(.*)$/);
     if (numbered) {
       flush();
-      blocks.push({ type: 'number', text: numbered[1].trim() });
+      // 원래 번호를 보존한다. 사진이나 하위 목록이 끼어 목록이 끊겨도 1부터 다시 세지 않게.
+      blocks.push({ type: 'number', text: numbered[2].trim(), n: Number(numbered[1]) });
       continue;
     }
 

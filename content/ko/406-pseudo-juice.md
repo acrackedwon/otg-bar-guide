@@ -23,17 +23,40 @@
 2. 칼이나 필러로 **껍질을 전부 벗겨냅니다.**
    **초록 부분만** 벗기고 흰 부분은 최소화합니다. 흰 부분이 붙어 있으면 도려냅니다 — 쓴맛이 납니다.
 3. 벗겨낸 **껍질의 무게를 잽니다.**
+
+![껍질 무게 재기 — 컵을 올리고 TARE로 0을 맞춘 뒤 껍질만 잽니다](/photos/pseudo-1-peel-weigh.jpg)
+
 4. Steve the Bartender의 [수도 주스 계산기](https://app.stevethebartender.com.au/calc/pseudo-juice)에 접속합니다.
    (구글에 "Pseudo Juice Calculator"를 검색해도 나옵니다)
 5. **라임**을 고르고 **껍질 무게**를 입력하면, 넣어야 할 재료의 양이 나옵니다.
 6. 컵에 껍질과 계산기에 나온 양만큼의 **설탕, 구연산, 사과산, 소금**을 넣습니다.
+
+![저울 위에서 가루를 하나씩 계량해 넣기 — 구연산(CITRIC ACID)과 사과산(DL-MALIC ACID) 통](/photos/pseudo-2-add-powders.jpg)
+
 7. **랩으로 감싸고 2~3시간** 기다립니다.
 8. 시간이 지나면 껍질의 색이 전부 빠지고, 설탕이 녹아 액체가 됩니다.
 9. 계산기에 나온 양만큼 **생수**를 받아두고, 블렌더에 전부 넣습니다.
+
+![생수 계량 — 저울 단위를 ml로 바꿔서 잽니다](/photos/pseudo-3-water-weigh.jpg)
+
    - 이 생수로 컵에 남은 설탕, 가루, 껍질을 **긁어낸다는 느낌으로 헹궈서** 같이 블렌더에 담습니다. 컵에 남기면 비율이 틀어집니다.
+
+![컵에 남은 것까지 블렌더로](/photos/pseudo-4-rinse-into-blender.jpg)
+
 10. **1~2분** 적절히 갑니다.
+
+![블렌더로 갈기](/photos/pseudo-5-blend.jpg)
+
 11. **면포로 거릅니다.**
+
+![면포](/photos/pseudo-6-cheesecloth.jpg)
+
+![통 위에 면포를 씌워 거를 준비](/photos/pseudo-7-strain-setup.jpg)
+
 12. 걸러진 액체만 병에 담고 **라벨을 붙입니다.**
+
+![완성 — 라벨에 이름과 만든 날짜(11/20)](/photos/pseudo-8-bottled.jpg)
+
 
 ## 보관
 

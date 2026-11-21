@@ -11,7 +11,7 @@ export type Block =
   | { type: 'paragraph'; text: string }
   | { type: 'heading'; text: string }
   | { type: 'bullet'; text: string }
-  | { type: 'number'; text: string }
+  | { type: 'number'; text: string; n: number }
   | { type: 'image'; url: string; caption: string }
   | { type: 'note'; text: string }
   | { type: 'table'; head: string[]; rows: string[][] };

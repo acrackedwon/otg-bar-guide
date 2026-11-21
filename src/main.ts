@@ -276,7 +276,8 @@ function renderBlocks(blocks: Block[]): string {
         out.push(`<${want}>`);
         listType = want;
       }
-      out.push(`<li>${inline(block.text)}</li>`);
+      const value = block.type === 'number' ? ` value="${block.n}"` : '';
+      out.push(`<li${value}>${inline(block.text)}</li>`);
       continue;
     }
     closeList();
